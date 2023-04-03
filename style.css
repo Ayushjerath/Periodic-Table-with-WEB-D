@@ -1,0 +1,192 @@
+body {
+    font-family: 'Times New Roman';
+    background-color: darkslategrey;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 22px;
+}
+
+#tablename {
+    color: beige;
+    font-size: 30px;
+    height: 20px;
+}
+
+.tables {
+    position: relative;
+    height: 200px;
+    margin-right: -1px;
+    text-shadow: none;
+}
+
+.rows {
+    clear: both;
+    height: 10%;
+}
+
+.div {
+    float: left;
+    position: relative;
+    width: 5.55%;
+    height: 100%;
+}
+
+.element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    right: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    background-color: green;
+}
+
+.div:hover .element {
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: cyan;
+}
+
+.num,
+.name {
+    position: absolute;
+    font-size: 4px;
+    /* color: rgb(255,255,255); */
+    color: whitesmoke;
+}
+
+.num {
+    top: 4px;
+    right: 5px;
+}
+
+.symbol {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin-top: -4px;
+    font-size: 9px;
+    line-height: 1;
+    height: 9px;
+    color: white;
+}
+
+.name {
+    bottom: 4px;
+    left: 0px;
+    right: 0px;
+}
+
+.div:nth-child(-n+2) .element,
+.div:nth-child(n+13) .element {
+    /* background-color: rgba(0, 160, 96, 0.6); */
+    background-color: pink;
+}
+
+.div:nth-child(1) .element,
+.rows:nth-child(2) .div:nth-child(n+14) .element,
+.rows:nth-child(3) .div:nth-child(n+15) .element,
+.rows:nth-child(4) .div:nth-child(n+16) .element,
+.rows:nth-child(5) .div:nth-child(n+17) .element {
+    background-color: Red;
+}
+
+.rows:nth-child(-n+6) .div:nth-child(18) .element {
+    background-color: blueviolet;
+}
+
+.rows:nth-child(n+9) .element {
+    background-color: black;
+}
+
+.div:nth-child(-n+2):hover .element,
+.div:nth-child(n+13):hover .element {
+    background-color: purple;
+}
+
+.div:nth-child(1):hover .element,
+.rows:nth-child(2) .div:nth-child(n+14):hover .element,
+.rows:nth-child(3) .div:nth-child(n+15):hover .element,
+.rows:nth-child(4) .div:nth-child(n+16):hover .element,
+.rows:nth-child(5) .div:nth-child(n+17):hover .element {
+    background-color: coral;
+}
+
+.rows:nth-child(-n+6) .div:nth-child(18):hover .element {
+    background-color: darkblue;
+}
+
+.rows:nth-child(n+9) .div:hover .element {
+    background-color: gray;
+}
+
+@media (min-width: 600px) {
+    .tables {
+        height: 460px;
+        margin-right: -2px;
+    }
+
+    .element {
+        right: 2px;
+        bottom: 2px;
+    }
+
+    .num,.name {
+        font-size: 4px;
+    }
+
+    .symbol {
+        margin-top: -17px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 30px;
+        height: 30px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+@media (min-width: 800px) {
+    .tables {
+        height: 540px;
+    }
+
+    .symbol {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .tables {
+        height: 680px;
+    }
+
+    .num,.name {
+        font-size: 5px;
+    }
+
+    .symbol {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tables {
+        height: 800px;
+    }
+
+    .num,.name {
+        font-size: 6px;
+    }
+
+    .symbol {
+        font-size: 30px;
+    }
+}
